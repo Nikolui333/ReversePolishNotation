@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
-        android:textSize="40sp"
+        android:textSize="45sp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="60dp"
@@ -26,6 +26,7 @@
         android:layout_below="@id/text"
         android:layout_marginLeft="5dp"
         android:text="1"
+        android:textSize="30sp"
         android:onClick="clik1"/>
 
     <Button
@@ -35,6 +36,7 @@
         android:layout_toRightOf="@id/button"
         android:layout_below="@id/text"
         android:text="2"
+        android:textSize="30sp"
         android:onClick="clik2"/>
 
     <Button
@@ -44,6 +46,7 @@
         android:layout_below="@id/text"
         android:layout_toRightOf="@id/button2"
         android:text="3"
+        android:textSize="30sp"
         android:onClick="clik3"/>
 
     <Button
@@ -53,6 +56,7 @@
         android:layout_below="@id/button"
         android:layout_marginLeft="5dp"
         android:text="4"
+        android:textSize="30sp"
         android:onClick="clik4"/>
 
     <Button
@@ -62,6 +66,7 @@
         android:layout_below="@id/button2"
         android:layout_toRightOf="@id/button4"
         android:text="5"
+        android:textSize="30sp"
         android:onClick="clik5"/>
 
     <Button
@@ -71,6 +76,7 @@
         android:layout_below="@id/button2"
         android:layout_toRightOf="@id/button5"
         android:text="6"
+        android:textSize="30sp"
         android:onClick="clik6"/>
 
     <Button
@@ -80,6 +86,7 @@
         android:layout_below="@id/button4"
         android:layout_marginLeft="5dp"
         android:text="7"
+        android:textSize="30sp"
         android:onClick="clik7"/>
 
     <Button
@@ -89,6 +96,7 @@
         android:layout_below="@id/button5"
         android:layout_toRightOf="@id/button7"
         android:text="8"
+        android:textSize="30sp"
         android:onClick="clik8"/>
 
     <Button
@@ -98,6 +106,7 @@
         android:layout_below="@id/button6"
         android:layout_toRightOf="@id/button8"
         android:text="9"
+        android:textSize="30sp"
         android:onClick="clik9"/>
 
 
@@ -109,6 +118,7 @@
         android:layout_below="@id/button8"
         android:layout_toRightOf="@id/button7"
         android:text="0"
+        android:textSize="30sp"
         android:onClick="clik0"/>
 
     <Button
@@ -118,6 +128,7 @@
         android:layout_below="@id/text"
         android:layout_toRightOf="@id/button3"
         android:text="⟸"
+        android:textSize="30sp"
         android:onClick="delete"/>
 
     <Button
@@ -127,6 +138,7 @@
         android:layout_below="@id/buttonDelete"
         android:layout_toRightOf="@id/button3"
         android:text="+"
+        android:textSize="30sp"
         android:onClick="clikPlus"/>
 
     <Button
@@ -136,14 +148,16 @@
         android:layout_below="@id/buttonPlus"
         android:layout_toRightOf="@id/button6"
         android:text="-"
+        android:textSize="30sp"
         android:onClick="clik1Minus"/>
     <Button
         android:id="@+id/buttonMultiplication"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/buttonMinus"
-        android:layout_toRightOf="@id/button9"
+        android:layout_toRightOf="@id/buttonPoint"
         android:text="*"
+        android:textSize="30sp"
         android:onClick="clik1Multiplication"/>
 
     <Button
@@ -153,15 +167,17 @@
         android:layout_below="@id/buttonMultiplication"
         android:layout_toRightOf="@id/buttonEqually"
         android:text="/"
+        android:textSize="30sp"
         android:onClick="clik1Division"/>
 
     <Button
         android:id="@+id/buttonEqually"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button9"
-        android:layout_toRightOf="@id/button0"
+        android:layout_below="@id/buttonPoint"
+        android:layout_toRightOf="@+id/closingBracket"
         android:text="="
+        android:textSize="30sp"
         android:onClick="clikEqually"/>
 
     <Button
@@ -171,33 +187,37 @@
         android:layout_below="@id/button7"
         android:layout_marginLeft="5dp"
         android:text="C"
+        android:textSize="30sp"
         android:onClick="clik1C"/>
 
     <Button
         android:id="@+id/buttonPoint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonC"
-        android:layout_marginLeft="5dp"
+        android:layout_below="@id/button9"
+        android:layout_toRightOf="@id/button0"
         android:onClick="clik1Point"
+        android:textSize="30sp"
         android:text="." />
 
     <Button
         android:id="@+id/openingBracket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button0"
-        android:layout_toRightOf="@id/buttonPoint"
+        android:layout_below="@id/buttonC"
+        android:layout_marginLeft="5dp"
         android:text="("
+        android:textSize="30sp"
         android:onClick="clikOpeningBracket"/>
 
      <Button
         android:id="@+id/closingBracket"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttonEqually"
+        android:layout_below="@id/buttonPoint"
         android:layout_toRightOf="@id/openingBracket"
         android:text=")"
+         android:textSize="30sp"
         android:onClick="clikClosingBracket"/>
 
 </RelativeLayout>

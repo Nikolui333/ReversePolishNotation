@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clikOpeningBracket(View view){ // открывающая скобка
-        if(sh==0) str="";
+        if(sh==0) str="(";
         else
             str+="(";
         sh++;
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
   public void clikClosingBracket(View view){ // закрываающая скобка
-        if(sh==0) str="";
+        if(sh==0) str=")";
         else
             str+=")";
         sh++;
@@ -160,22 +160,40 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void delete(View view){ //стереть часть строки
-        char [] temp = this.str.toCharArray();
-        ArrayList list = new ArrayList();
-        for (int i = 0;i<temp.length;i++){
-            list.add(temp[i]);
+
+        try {
+            char [] temp = this.str.toCharArray();
+            if (this.str.equals("0")){
+
+            }
+            else if (str.equals("")){
+                str="0";
+                display(str);
+            }
+            else {
+                ArrayList list = new ArrayList();
+                for (int i = 0;i<temp.length;i++){
+                    list.add(temp[i]);
+                }
+                list.remove(temp.length-1);
+                this.str="";
+                for (int i = 0;i<list.size();i++){
+                    this.str += ""+ list.get(i);
+                }
+                sh--;
+                if(str.equals("")){
+                    display("0");
+                }
+            }
+
         }
-        list.remove(temp.length-1);
-        this.str="";
-        for (int i = 0;i<list.size();i++){
-            this.str += ""+ list.get(i);
+        catch (Exception ex){
+            sh=0;
+            str="0";
         }
-        sh--;
 
         OnClik();
     }
-
-
 
     private void display(String number) { //Передача текста в текстовую панель
         TextView text = (TextView) findViewById(R.id.text);
@@ -191,8 +209,14 @@ public class MainActivity extends AppCompatActivity {
         display(str);
     }
 
-    public void clikEqually(View view) {
-    display(new ReversePolishNotation().decide(str));
-       // OnClik();
+    public void clikEqually(View view) { // вычислить
+        try {
+            double res = new ReversePolishNotation().decide(str);
+            display(res);
+            this.str= String.valueOf(res);
+        }catch (Exception ex){
+
+        }
+
     }
 }
