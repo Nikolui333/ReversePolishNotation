@@ -124,7 +124,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //меод кнопки "." для дробных чисел
-
     public void clik1Point(View view){
         if(sh==0) str="";
         else
